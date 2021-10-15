@@ -7,7 +7,7 @@ Python and Pharmacy data are a perfect match.  Most of pharmacy data is manually
 Due to heavy legal regulation, the structure of pharmacy data is unlikely to change quickly and the world of pharmacy requires fastidious book keeping.  Regulation has also created a large barrier to entry for new software so many outdated and clunky programs that made it through the gate decades ago roam free in the world of pharmacy, wasting time and holding back the industry.  
 
 ### Scope
-PyPharm is intended to pull in data from mulitple sources and quickly mobilize that data to serve the needs of the pharmacy and patients.  Specifically:
+PyPharm is intended to pull in data from multiple sources and quickly mobilize that data to serve the needs of the pharmacy and patients.  Specifically:
 - Patient profiles
   - Demographics
 - Prescription data
