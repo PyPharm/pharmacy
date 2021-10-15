@@ -2,11 +2,11 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/pypharm" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/PyPharm Logo" />
-      <excludeFolder url="file://$MODULE_DIR$/Delete" />
       <excludeFolder url="file://$MODULE_DIR$/Exclude" />
       <excludeFolder url="file://$MODULE_DIR$/Junk" />
+      <excludeFolder url="file://$MODULE_DIR$/PyPharm Logo" />
+      <excludeFolder url="file://$MODULE_DIR$/Delete" />
+      <excludeFolder url="file://$MODULE_DIR$/Tests" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.8 (general interpreter 3.8)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
