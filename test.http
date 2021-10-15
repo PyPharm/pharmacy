@@ -1,5 +1,0 @@
-
-GET httpbin.org/
-Accept: application/json
-id=99
-###

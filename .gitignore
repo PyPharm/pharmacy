@@ -2,3 +2,6 @@
 /Exclude/
 /Junk/
 /venv/
+
+/test.http
+/.idea/
