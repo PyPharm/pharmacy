@@ -5,5 +5,6 @@
 
 /test.http
 /.idea/
-/api/sentry/drl_api_key.txt
-/api/sentry/sentry_config.cfg
+/api/drl_api_key.txt
+/api/sentry_config.ini
+/api/drl_api_key.txt
