@@ -12,7 +12,7 @@ PyPharm is intended to pull in data from mulitple sources and quickly mobilize t
   - Demographics
 - Prescription data
   - Fills
-  - Billing data
+  - Claims
     - Loss analysis
     - Opportunity analysis
 - Drug data
