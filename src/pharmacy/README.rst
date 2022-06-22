@@ -1,14 +1,12 @@
-.. pypharm documentation master file, created by
+.. pharmacy documentation master file, created by
    sphinx-quickstart on Sat Apr 30 23:42:56 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
 .. _source: https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html
 .. https://stackoverflow.com/questions/59903051/sphinxs-autodocs-automodule-having-apparently-no-effect
 
 .. meta::
    :description: pharmacy Module Documentation
-   :keywords: python, pharmacy, sql, medicine, medical, ichp, apha, ashp, pharmacist, technician, doctor, hospital
+   :keywords: python, pharmacy, sql, medicine, medical, apha, ashp, ichp, pharmacist, technician, doctor, hospital
 
 Welcome to the *pharmacy* module documentation.
 =====================================

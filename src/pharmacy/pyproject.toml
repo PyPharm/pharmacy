@@ -1,9 +1,22 @@
 [tool.poetry]
 name = "pharmacy"
 version = "0.1.0"
-description = "pharmacy"
+description = "The 'pharmacy' module is a set of utilities for use with hospital and retail pharmacy data."
 authors = ["Danny Limoges, PharmD <pharmacydataland@gmail.com>"]
+license=  "AGPL-3.0-or-later"
 readme = "README.rst"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: Medical Science Apps."
+
+
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -14,3 +27,22 @@ pytest = "^5.2"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.bumpver]
+current_version = "0.1.2"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = true
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'current_version = "{version}"',
+]
+"README.rst" = [
+    "{version}",
+    "{pep440_version}",
+]
+"pharmacy/__init__.py" = ["{version}"]
+"pharmacy/__main__.py" = ["{version}"]
