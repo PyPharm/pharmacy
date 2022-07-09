@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'pypharm'
+project = 'pharmacy'
 copyright = '2022, Danny Limoges,PharmD'
 author = 'Danny Limoges,PharmD'
 
