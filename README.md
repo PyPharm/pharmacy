@@ -17,6 +17,7 @@ Due to heavy legal regulation, the structure of pharmacy data is unlikely to cha
 PyPharm is intended to pull in data from multiple sources and quickly mobilize that data to serve the needs of the pharmacy and patients.  Specifically:
 - Patient profiles
   - Demographics
+  - Geolocation
 - Prescription data
   - Fills
   - Claims
