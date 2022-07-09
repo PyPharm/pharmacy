@@ -1,4 +1,4 @@
-# pharmacy
+# *pharmacy*
 [![Package Status](https://img.shields.io/pypi/status/pharmacy.svg)](https://pypi.org/project/pharmacy/)
 [![PyPI Latest Release](https://img.shields.io/pypi/v/pharmacy.svg)](https://pypi.org/project/pharmacy/)
 [![License](https://img.shields.io/pypi/l/pharmacy.svg)](https://github.com/PyPharm/pypharm/LICENSE/blob/main/LICENSE)
@@ -6,7 +6,7 @@
 
 A hospital and retail pharmacy-focused package by Danny Limoges, PharmD.
 
-##<span style="color:red">*This project is in the alpha/planning stage.*</span>
+## <span style="color:red">*This project is in the alpha/planning stage.*</span>
 
 ## Installation
 Available on PyPI as an installable package:  https://pypi.org/project/pharmacy/
