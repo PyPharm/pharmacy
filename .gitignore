@@ -9,3 +9,4 @@
 /api/sentry_config.ini
 /api/drl_api_key.txt
 /api/openfda_exclude/
+/api/
