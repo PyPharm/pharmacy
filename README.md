@@ -14,7 +14,7 @@ Available on PyPI as an installable package:  https://pypi.org/project/pharmacy/
   pip install pharmacy
 ```
 
-
+ 
 ## Background
 <i class="fa-thin fa-file-prescription"></i>
  
