@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/pypi/l/pharmacy.svg)](https://github.com/PyPharm/pypharm/LICENSE/blob/main/LICENSE)
 [![Downloads](https://static.pepy.tech/personalized-badge/pharmacy?period=month&units=international_system&left_color=grey&right_color=green&left_text=PyPI%20Downloads)](https://pepy.tech/project/pharmacy)
 
-A hospital and retail pharmacy-focused package by Danny Limoges, PharmD.
+A hospital and retail pharmacy-focused Python package by Danny Limoges, PharmD.
 
 ## <span style="color:red">*This project is in the alpha/planning stage.*</span>
 
