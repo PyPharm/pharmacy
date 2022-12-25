@@ -45,9 +45,10 @@ General Pattern - Read First
 
 
 
-
 Indices and tables
 ==================
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+
