@@ -15,6 +15,11 @@ ndc_regex = '/(?<labeler_code>\d{1,6})(?:[-]*)(?<product_code>\d{1,4})(?:[-])(?<
 
 def main():
 
+    a = NDC('1231-3020-20')
+    b = NDC('1231-3020-20')
+    print(a == b)
+    print(int(a))
+
     # todo: move these into unit tests
     good_ndcs = [
         '12345-1234-01',    # 5-4-2
@@ -78,15 +83,51 @@ class NDC:
     def __str__(self):
         return self.ndc_simple
 
-    def __eq__(self, other):
-        if self.ndc_simple == other.ndc_simple:           # todo: test this.
-            return True
-        else:
-            return False
+    def __int__(self):
+        return int(self.ndc_simple)
 
+    def __eq__(self, other):
+        return self.ndc_simple == other.ndc_simple           # todo: test this.
+
+    def __len__(self):
+        return len(self.ndc_simple)
+
+    def __contains__(self, item):
+        return item in self.ndc_simple
+
+    # ------------------------------------------------------------------------------------------------------------------
+    # Properties
+    # ------------------------------------------------------------------------------------------------------------------
+    # synonyms of "manufacturer"
+    @property
+    def mfg(self):
+        return self.ndcd['mfg']
+    @property
+    def manufacturer(self):
+        return self.ndcd['mfg']
     @property
     def labeler(self):
         return self.ndcd['mfg']
+
+    @property
+    def product(self):
+        return self.ndcd['product']
+
+    # synonyms of "package"
+    @property
+    def pkg(self):
+        return self.ndcd['pkg']
+    @property
+    def package(self):
+        return self.ndcd['pkg']
+
+    @property
+    def dashed(self):
+        return self.ndcd['mfg'] + '-' + self.ndcd['product'] + '-' + self.ndcd['pkg']
+
+    # ------------------------------------------------------------------------------------------------------------------
+    # Methods
+    # ------------------------------------------------------------------------------------------------------------------
 
     def clean_ndc(self, ndc):
         """
