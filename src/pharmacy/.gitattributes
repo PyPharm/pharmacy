@@ -1,7 +1,5 @@
 # Example of a `.gitattributes` file which reclassifies `.rb` files as Java:
-*.rst linguist-language=python
-*.md linguist-language=python
-*.py linguist-language=python
+
 
 
 # Basic .gitattributes for a python repo.

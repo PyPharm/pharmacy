@@ -9,11 +9,15 @@
 *.pyx    text diff=python
 *.pyz    text diff=python
 *.pyi    text diff=python
-*.rst   linguist-vendored
-*.md    linguist-vendored
-*.js    linguist-vendored
-*.css   linguist-vendored
+*.rst   linguist-detectable=false
+*.md    linguist-detectable=false
+*.js    linguist-detectable=false
+*.css   linguist-detectable=false
 build/* linguist-vendored
+*.sql   linguist-detectable=false
+
+
+
 
 # Binary files
 # ============
