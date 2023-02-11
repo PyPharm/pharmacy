@@ -1,9 +1,3 @@
-
-*.rst   linguist-vendored
-*.md    linguist-vendored
-*.py linguist-language=python
-build/* linguist-vendored
-
 # Basic .gitattributes for a python repo.
 
 # Source files
@@ -15,6 +9,11 @@ build/* linguist-vendored
 *.pyx    text diff=python
 *.pyz    text diff=python
 *.pyi    text diff=python
+*.rst   linguist-vendored
+*.md    linguist-vendored
+*.js    linguist-vendored
+*.css   linguist-vendored
+build/* linguist-vendored
 
 # Binary files
 # ============
