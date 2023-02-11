@@ -2,7 +2,7 @@
 *.rst linguist-language=python
 *.md linguist-language=python
 *.py linguist-language=python
-
+build/* linguist-vendored
 
 # Basic .gitattributes for a python repo.
 
