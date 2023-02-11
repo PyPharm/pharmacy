@@ -18,7 +18,7 @@
 *.bat   linguist-detectable=false
 build/* linguist-vendored
 *.sql   linguist-detectable=false
-Makefile linguist-detectable=false
+*Makefile* linguist-detectable=false
 
 
 
