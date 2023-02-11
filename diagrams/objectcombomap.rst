@@ -15,7 +15,7 @@ Combination Map
 ------------------------------
 
 
-``` mermaid
+```mermaid
 graph LR
     %% First two levels
     rx[Prescriptions] --> rxf[Prescriptions and Fills]
@@ -64,10 +64,4 @@ graph LR
 The '+' Operator for Source Files
 -----------------
 The pycharm workflow for source files is as follows:
-
-```mermaid
-graph LR
-    a --> b
-
-```
 
