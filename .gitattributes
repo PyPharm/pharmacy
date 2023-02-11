@@ -15,6 +15,7 @@
 *.css   linguist-detectable=false
 *.htm   linguist-detectable=false
 *.html  linguist-detectable=false
+*.bat   linguist-detectable=false
 build/* linguist-vendored
 *.sql   linguist-detectable=false
 
