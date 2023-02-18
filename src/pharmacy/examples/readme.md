@@ -5,7 +5,7 @@ Remember that doctest wants a break after code examples or they will fail.
 -->
 # Pharmacy Python Examples
 Here is a selection of code snippets useful in analyzing data from hospital, community and other pharmacy settings.
-<br>Most of these examples utilize Pandas.
+<br>Most of these examples utilize Pandas.   
 
 ## Intro
 If you have not already installed the `pandas` library, go to the **terminal** and type `pip install pandas`.  
