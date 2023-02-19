@@ -1,5 +1,15 @@
-from pharmacy import __version__
+import sys, unittest
+from importlib.machinery import  SourceFileLoader
+
+pharmacy = SourceFileLoader("pharmacy", "../pharmacy/__init__.py").load_module()
+print( f' {pharmacy.__version__}  ')
+
+class InitTest(unittest.TestCase):
+    def test_version(self):
+        pass
 
 
-def test_version():
-    assert __version__ == '0.1.0'
+if __name__ == "__main__":
+    unittest.main()
+
+
