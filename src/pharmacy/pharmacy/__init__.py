@@ -20,7 +20,7 @@ def main():
     print(a == b)
     print(int(a))
 
-    # todo: move these into unit tests
+    # todo: move these into unit unit_tests
     good_ndcs = [
         '12345-1234-01',    # 5-4-2
         '1234-1234-01',     # 4-4-2
@@ -42,7 +42,7 @@ def main():
          }                  # dictionary of strings with correct labels
     ]
 
-    #todo: move these into unit tests
+    #todo: move these into unit unit_tests
     ugly_ndcs = [
         12345678901,
         123,
