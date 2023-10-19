@@ -1,3 +1,5 @@
+__version__ = '0.2.0'
+
 # pip install fuzzywuzzy[speedup]   to
 from fuzzywuzzy import fuzz, process
 import pandas as pd
@@ -23,11 +25,10 @@ def find_best_matches(df_orig
         name_o = row_o[match_col]
 
         best_match, score, _ = process.extractOne(name_o, df2[match_col_comparator], scorer=fuzz.token_sort_ratio)
-
-
+        print(best_match)
         if score >= threshold:
             best_matches.append((row_o, df2[df2[match_col_comparator] == best_match].iloc[0]))
-
+            #df_matches.loc[]
 
     return best_matches
 
@@ -38,9 +39,6 @@ if __name__ == "__main__":
 
 
     best_matches = find_best_matches(df1, df2, match_col='name' , threshold=90)
-    for match in best_matches:
-        print("Match from df1:")
-        print(match[0])
-        print("Best match from df2:")
-        print(match[1])
+
+    print(best_matches)
 

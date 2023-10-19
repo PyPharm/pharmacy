@@ -1,6 +1,6 @@
 .. pharmacy documentation master file, created by
    sphinx-quickstart on Sat Apr 30 23:42:56 2022.
-   version 0.1.17
+   version 0.2.0
 
 .. _source: https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html
 .. https://stackoverflow.com/questions/59903051/sphinxs-autodocs-automodule-having-apparently-no-effect
