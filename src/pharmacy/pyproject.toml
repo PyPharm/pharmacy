@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pharmacy"
-version = "0.2.0"
+version = "0.2.1"
 description = "The pharmacy module is a set of utilities for use with hospital and retail pharmacy data."
 authors = ["Danny Limoges, PharmD <pharmacydataland@gmail.com>"]
 license=  "AGPL-3.0-or-later"
@@ -16,8 +16,17 @@ classifiers = [
 
 ]
 
+[project]
+dependencies = [
+    'requests = ^2.28.2, !=2.30.0'
+    ]
+
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
+python-dateutil = ">=2.5.3"
+setuptools = ">=21.0.0"
+urllib3 = "1.26.15"
+requests-toolbelt = "0.10.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
@@ -27,7 +36,7 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.bumpver]
-current_version = "0.2.0"
+current_version = "0.2.1"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message = "bump version {old_version} -> {new_version}"
 commit = true

@@ -1,5 +1,5 @@
 <!--  
-__version__ = 0.2.0
+__version__ = 0.2.1
 https://www.markdownguide.org/cheat-sheet/   
 Remember that doctest wants a break after code examples or they will fail.
 -->
