@@ -2,9 +2,8 @@
 name = "pharmacy"
 version = "0.2.1"
 description = "The pharmacy module is a set of utilities for use with hospital and retail pharmacy data."
-authors = ["Danny Limoges <drlimoges@gmail.com>"]
-license = "AGPL-3.0-or-later"
-readme = "README.md"
+authors = ["Danny Limoges, PharmD <pharmacydataland@gmail.com>"]
+license=  "AGPL-3.0-or-later"
 classifiers = [
     "Development Status :: 1 - Planning",
     "Intended Audience :: Healthcare Industry",
@@ -17,12 +16,23 @@ classifiers = [
 
 ]
 
-[tool.poetry.dependencies]
-python = "^3.10"
+[project]
+dependencies = [
+    'requests = ^2.28.2, !=2.30.0'
+    ]
 
+[tool.poetry.dependencies]
+python = "^3.8"
+python-dateutil = ">=2.5.3"
+setuptools = ">=21.0.0"
+urllib3 = ">=1.26.15"
+requests-toolbelt = ">=0.10.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.2"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.bumpver]
