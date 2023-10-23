@@ -1,4 +1,4 @@
- [comment]: <>  ( __version__ = '0.2.3'  )
+ [comment]: <>  ( __version__ = '0.2.4'  )
  
 # *pharmacy*
 [![Package Status](https://img.shields.io/pypi/status/pharmacy.svg)](https://pypi.org/project/pharmacy/)
