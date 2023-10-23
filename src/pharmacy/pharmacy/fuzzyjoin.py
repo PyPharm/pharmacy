@@ -1,4 +1,4 @@
-__version__ = '0.2.8'
+__version__ = '0.3.0'
 
 # pip install fuzzywuzzy[speedup]   to
 from thefuzz import fuzz, process
@@ -29,7 +29,7 @@ def find_best_matches(df_orig
     # if no comparator column is named, look for the same name as the original.
     if not match_col_comparator:
         match_col_comparator = match_col
-    df_orig_plus_matches = df_orig.copy()
+    df_merge = df_orig.copy()
     df_matches = pd.DataFrame()
 
     # ---------------------------------------------------------------------------------------------------------------
@@ -53,17 +53,24 @@ def find_best_matches(df_orig
 
     df_matches.set_index('orig_index', inplace=True)
 
-    df_orig_plus_matches = df_orig_plus_matches.merge(df_matches
-                               ,how='left'
-                               ,left_index=True
-                               ,right_on='orig_index'
-                               ,suffixes=('','_y'))
-    print(df_orig_plus_matches)
+    df_merge = df_orig.merge(df_matches
+                             , how='left'
+                             , left_index=True
+                             , right_on='orig_index'
+                             , suffixes=('','_y'))
+    print(df_merge)
+
+    # Convert the columns with NaN values back to their original data types
+    # from ChatGPT - not sure about this yet.
+    #df_merge['value_right'] = df_merge['value_right'].combine_first(df_merge['value_left'])
+    #merged_df.drop(['value_left'], axis=1, inplace=True)
+    #merged_df.rename(columns={'value_right': 'value'}, inplace=True)
+
 
     # TODO: fix data types from merged-in columns after the merge.  Adding NaN damages the types.
 
     # after all the matches are done, concat the resulting matches dataframe
-    return df_orig_plus_matches     # best_matches
+    return df_merge     # best_matches
 
 if __name__ == "__main__":
     df1 = pd.read_excel(example_a, sheet_name='data 1')
