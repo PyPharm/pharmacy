@@ -1,4 +1,4 @@
-__version__ = '0.2.1'
+__version__ = '0.2.2'
 
 # pip install fuzzywuzzy[speedup]   to
 from thefuzz import fuzz, process
