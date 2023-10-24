@@ -1,10 +1,10 @@
- [comment]: <>  ( __version__ = '0.3.0'  )
+ [comment]: <>  ( __version__ = '0.3.1'  )
  
 # *pharmacy*
 [![Package Status](https://img.shields.io/pypi/status/pharmacy.svg)](https://pypi.org/project/pharmacy/)
 [![PyPI Latest Release](https://img.shields.io/pypi/v/pharmacy.svg)](https://pypi.org/project/pharmacy/)
 [![License](https://img.shields.io/pypi/l/pharmacy.svg)](https://github.com/PyPharm/pypharm/LICENSE/blob/main/LICENSE)
-[![Downloads](https://static.pepy.tech/personalized-badge/pharmacy?period=month&units=international_system&left_color=grey&right_color=green&left_text=PyPI%20Downloads)](https://pepy.tech/project/pharmacy)
+[![Downloads](https://static.pepy.tech/badge/pharmacy/month)](https://pepy.tech/project/pharmacy)
 
 A hospital and retail pharmacy-focused Python package by Danny Limoges, PharmD. 
 
