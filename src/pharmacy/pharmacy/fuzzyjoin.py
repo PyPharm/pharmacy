@@ -1,4 +1,4 @@
-__version__ = '0.3.4'
+__version__ = '0.3.5'
 
 # pip install fuzzywuzzy[speedup]   to
 from thefuzz import fuzz, process
@@ -14,7 +14,7 @@ def find_best_matches(df_orig
                       , match_col
                       , match_col_comparator = None   # optionally the name of the column in the comparator table
                       , threshold=80
-                      , scorer=fuzz.token_set_ratio    # options: ratio, partial_ratio, token_sort_ratio, token_set_ratio
+                      , scorer=fuzz.token_sort_ratio    # options: ratio, partial_ratio, token_sort_ratio, token_set_ratio
                       #, cols_to_keep = None        # TODO: create this feature
                       ) -> pd.DataFrame :
     # ---------------------------------------------------------------------------------------------------------------
@@ -35,6 +35,7 @@ def find_best_matches(df_orig
     # ---------------------------------------------------------------------------------------------------------------
     # Match
     # begin the match
+    # TODO: add a spinning counter of the number of rows processed and how many matches, how many 100% matches
     for index_o, row_o in df_orig.iterrows():
 
         # Change column names on comparator

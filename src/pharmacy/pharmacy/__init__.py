@@ -1,8 +1,11 @@
-__version__ = '0.3.4'
+__version__ = '0.3.5'
 
 import pandas as pd
 import warnings
-from .fuzzyjoin import find_best_matches
+from datetime import datetime
+
+from fuzzyjoin import find_best_matches
+from pathlib import Path
 
 # main location for pypharm objects
 
@@ -12,57 +15,6 @@ import re
 # https://regexr.com/6083d
 ndc_regex = '/(?<labeler_code>\d{1,6})(?:[-]*)(?<product_code>\d{1,4})(?:[-])(?<package_code>\d{1,2})|(?<labeler>\d{5})(?<product>\d{4})(?<package>\d{2})/gi'
 #ndc_re_pattern = re.compile(ndc_regex)
-
-def main():
-
-    a = NDC('1231-3020-20')
-    b = NDC('1231-3020-20')
-    print(a == b)
-    print(int(a))
-
-    # todo: move these into unit unit_tests
-    good_ndcs = [
-        '12345-1234-01',    # 5-4-2
-        '1234-1234-01',     # 4-4-2
-        '12345-123-01',     # 5-3-2
-        '12345-1234-1',     # 5-4-1
-        '123456-123-01',    # 6-3-2
-        '123456-1234-0',    # 6-4-1
-        '12345123401',      # 11 digit string
-        92345123401,        # 11 digit integer
-        #2345123401,         # 10 digit integer        #todo: think hard about this.  Should it be assumed that an overly
-                                                    #short NDC where 0s are cut out is actually correct?
-        {'mfg': 12345,
-         'product': 1234,
-         'pkg': 10
-         },                 # dictionary of integers with correct labels
-        {'mfg': '12345',
-         'product': '1234',
-         'pkg': '10'
-         }                  # dictionary of strings with correct labels
-    ]
-
-    #todo: move these into unit unit_tests
-    ugly_ndcs = [
-        12345678901,
-        123,
-        'asdsf-fsdf-sf',
-        'aasdfasdfas',
-        'asdf',
-        '123-456-78',
-        '0123a-0456-78',
-        '01234-5678-90',
-        '0123-45678-90',
-        '0123-4567-890'
-    ]
-
-    for good_ndc in good_ndcs:
-        n = NDC(good_ndc)
-        print(f'Original NDC: {n._ndc_input} \tTransformed: {n.ndc_simple}')
-
-    for ugly_ndc in ugly_ndcs:
-        print(NDC(ugly_ndc).ndc_simple)
-
 
 
 class NDC:
@@ -212,16 +164,68 @@ class NDC:
 
         return ndc_dict
 
-
-
-
-
         # 11 digit string
         # 11 digit .. ?
 
-
-
         raise FutureWarning(f'Program This.  Clean dashed NDC {ndc}.')
+
+
+def addDateToFilename(filename:str) -> str:
+    formatted_date = datetime.now().strftime("%Y-%m-%d %H%M")
+    filepath = Path(filename)
+    newfilename = filepath.stem + " " + formatted_date + filepath.suffix
+
+    return newfilename
+
+def main():
+
+    a = NDC('01231-3020-20')
+    b = NDC('01231-3020-20')
+    #print(a == b)    # todo: test this
+    print(int(a))
+
+    # todo: move these into unit unit_tests
+    good_ndcs = [
+        '12345-1234-01',    # 5-4-2
+        '1234-1234-01',     # 4-4-2
+        '12345-123-01',     # 5-3-2
+        '12345-1234-1',     # 5-4-1
+        '123456-123-01',    # 6-3-2
+        '123456-1234-0',    # 6-4-1
+        '12345123401',      # 11 digit string
+        92345123401,        # 11 digit integer
+        #2345123401,         # 10 digit integer        #todo: think hard about this.  Should it be assumed that an overly
+                                                    #short NDC where 0s are cut out is actually correct?
+        {'mfg': 12345,
+         'product': 1234,
+         'pkg': 10
+         },                 # dictionary of integers with correct labels
+        {'mfg': '12345',
+         'product': '1234',
+         'pkg': '10'
+         }                  # dictionary of strings with correct labels
+    ]
+
+    #todo: move these into unit unit_tests
+    ugly_ndcs = [
+        12345678901,
+        123,
+        'asdsf-fsdf-sf',
+        'aasdfasdfas',
+        'asdf',
+        '123-456-78',
+        '0123a-0456-78',
+        '01234-5678-90',
+        '0123-45678-90',
+        '0123-4567-890'
+    ]
+
+    for good_ndc in good_ndcs:
+        n = NDC(good_ndc)
+        print(f'Original NDC: {n._ndc_input} \tTransformed: {n.ndc_simple}')
+
+    for ugly_ndc in ugly_ndcs:
+        print(NDC(ugly_ndc).ndc_simple)
 
 
 
