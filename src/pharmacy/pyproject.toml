@@ -19,6 +19,8 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
+thefuzz = "^0.20.0"
+pandas = "^1.00.0"
 
 
 [build-system]

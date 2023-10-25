@@ -2,7 +2,7 @@ __version__ = '0.3.3'
 
 import pandas as pd
 import warnings
-from fuzzyjoin import find_best_matches
+from .fuzzyjoin import find_best_matches
 
 # main location for pypharm objects
 
