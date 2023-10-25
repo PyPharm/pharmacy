@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pharmacy"
-version = "0.4.0"
+version = "0.4.1"
 description = "The pharmacy module is a set of utilities for use with hospital and retail pharmacy data."
 authors = ["Danny Limoges <drlimoges@gmail.com>"]
 license = "AGPL-3.0-or-later"
@@ -28,7 +28,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.bumpver]
-current_version = "0.4.0"
+current_version = "0.4.1"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message = "bump version {old_version} -> {new_version}"
 commit = true
@@ -39,7 +39,7 @@ push = true
 "pyproject.toml" = [    'version = "{version}"' ]
 "pharmacy/__init__.py" = ["__version__ = '{version}'"]
 "pharmacy/__main__.py" = ["{version}"]
-"pharmacy/fuzzyjoin.py" = ["__version__ = '{version}'"]
+"pharmacy/fuzzyjoin/__init__.py" = ["__version__ = '{version}'"]
 "README.md" = ["__version__ = '{version}'"]
-"examples/readme.md" = ["__version__ = {version}"]
+"examples/examples_readme.md" = ["__version__ = {version}"]
 
