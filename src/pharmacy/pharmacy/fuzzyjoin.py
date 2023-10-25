@@ -16,7 +16,7 @@ def find_best_matches(df_orig
                       , threshold=80
                       , scorer=fuzz.token_set_ratio    # options: ratio, partial_ratio, token_sort_ratio, token_set_ratio
                       #, cols_to_keep = None        # TODO: create this feature
-                      ):
+                      ) -> pd.DataFrame :
     # ---------------------------------------------------------------------------------------------------------------
     # Setup
     best_matches = []
@@ -46,7 +46,7 @@ def find_best_matches(df_orig
             new_row = pd.Series(data={'orig_index': index_o, 'match_score':score})
             #new_row['orig_index'] = index_o
             new_row = pd.concat( [new_row , df2.loc[idx].copy()])
-            print(new_row)
+            #print(new_row)
 
             df_matches = df_matches._append(new_row, ignore_index=True)
 
@@ -58,7 +58,7 @@ def find_best_matches(df_orig
                              , left_index=True
                              , right_on='orig_index'
                              , suffixes=('','_y'))
-    print(df_merge)
+    #print(df_merge)
 
     # Convert the columns with NaN values back to their original data types
     # from ChatGPT - not sure about this yet.
