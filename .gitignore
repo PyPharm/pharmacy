@@ -10,3 +10,5 @@
 /api/drl_api_key.txt
 /api/openfda_exclude/
 /api/
+*.gz
+*.whl
