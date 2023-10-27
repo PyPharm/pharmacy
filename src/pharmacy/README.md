@@ -1,4 +1,4 @@
- [comment]: <>  ( __version__ = '0.4.7'  )
+ [comment]: <>  ( __version__ = '0.4.8'  )
  
 # *pharmacy*
 [![Package Status](https://img.shields.io/pypi/status/pharmacy.svg)](https://pypi.org/project/pharmacy/)
@@ -26,9 +26,16 @@ and that the correct data was inputted.
 # Syntax
  
 ## find_best_matches
- Get a **fuzzy match** between two DataFrames and combine them where matched.  All rows from df_orig are kept and their corresponding matches are tacked onto the end if they  meet the match threshold.
+ Get a **fuzzy match** between two DataFrames and combine them where matched.
+ 
+**Output:** pandas DataFrame.  All rows from df_orig are kept and their corresponding matches are tacked onto the end if they  meet the match threshold.
+ 
 ```python
-find_best_matches(df_orig       # Original pandas DataFrame 
+import pharmacy as rx
+import pandas as pd
+
+df_out = rx.find_best_matches(
+                  df_orig       # Original pandas DataFrame 
                   , df2         # DataFrame to match against
                   , match_col   # Which column to examine in original DataFrame
                   , match_col_comparator = None   # The column name to compare
