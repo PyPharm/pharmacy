@@ -4,7 +4,7 @@ import pandas as pd
 import warnings
 from datetime import datetime
 
-from fuzzyjoin import find_best_matches
+from pharmacy.fuzzyjoin import find_best_matches
 from pathlib import Path
 
 # main location for pypharm objects

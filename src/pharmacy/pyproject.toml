@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "pharmacy"
 version = "0.4.7"
-description = "The pharmacy module is a set of utilities for use with hospital and retail pharmacy data."
+description = "A set of utilities for use with hospital and retail pharmacy data to deal with common pharmacy operations problems."
 authors = ["Danny Limoges <drlimoges@gmail.com>"]
 license = "AGPL-3.0-or-later"
 readme = "README.md"
